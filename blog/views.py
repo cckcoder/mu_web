@@ -10,4 +10,5 @@ def about(request):
     return render(request, 'blog/about.html')
 
 def post_details(request, post_id):
-    return HttpResponse(f"Post id: {post_id}")
+    post = Post.objects.get(id=post_id)
+    return render(request, 'blog/post_detail.html', {'post': post})
