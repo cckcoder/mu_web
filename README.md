@@ -2,6 +2,31 @@
 
 ## คำสั่งที่ใช้ใน Django
 
+ติดตั้ง Django (หลังจาก activate env)
+`pip install django`
+
+สร้าง Django Project
+`django-admin startproject <PROJECT_NAME>`
+
+> `django-admin startproject mysite`
+
+สร้าง Django App
+`python manage.py startapp <APP_NAME>`
+
+> `python manage.py startapp blog`
+
+การ makemigration
+
+`python manage.py makemigrations`
+
+การ migrate
+
+`python manage.py migrate`
+
+การสร้าง super user
+
+`python manage.py createsuperuser`
+
 ### Setup virtual env
 
 mac os
