@@ -12,3 +12,6 @@ def about(request):
 def post_details(request, post_id):
     post = Post.objects.get(id=post_id)
     return render(request, 'blog/post_detail.html', {'post': post})
+
+def contact(request):
+    return render(request, 'blog/contact.html')
