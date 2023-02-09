@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Post
+from .forms import ContactForm
 
 def home(request):
     # Query all post
@@ -15,6 +16,11 @@ def post_details(request, post_id):
 
 def contact(request):
     if request.method == "POST":
-        print("Submit Form")
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/")
+    else:
+        form = ContactForm()
 
-    return render(request, 'blog/forms.html')
+    return render(request, 'blog/forms.html', {'form': form})
