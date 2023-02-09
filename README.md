@@ -18,6 +18,8 @@ mac os
 windows os
 > \env\Script\activate
 
+## Python Shell
+
 ## Ref Tools
 * [vs code](https://code.visualstudio.com/)
 * [DB Browser](https://sqlitebrowser.org/)
