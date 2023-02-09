@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from .models import Post
-from .forms import ContactForm
+from .forms import ContactForm, RegisterForm
 
 def home(request):
     # Query all post
@@ -30,3 +30,15 @@ def contact(request):
         form = ContactForm()
 
     return render(request, 'blog/forms.html', {'form': form})
+
+def sign_up(request):
+
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/")
+    else:
+        form = RegisterForm()
+
+    return render(request, 'blog/sign_up.html', {'form': form})

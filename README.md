@@ -58,6 +58,14 @@ Require to install pillow library
 
 `pip install pillow`
 
+## Authentication
+
+Require crispy form
+
+`pip install django-crispy-forms`
+
+[Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
+
 ## Ref Tools
 * [vs code](https://code.visualstudio.com/)
 * [DB Browser](https://sqlitebrowser.org/)

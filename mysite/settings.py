@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'django_summernote', 
+    'crispy_forms', 
 ]
 
 MIDDLEWARE = [
