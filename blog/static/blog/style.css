@@ -1,0 +1,14 @@
+body {
+    background-color: blue;
+}
+
+h1 {
+    font-size: 32px;
+    color: white
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 22px;
+}
