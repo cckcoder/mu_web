@@ -1,4 +1,4 @@
 from django.shortcuts import render, HttpResponse
 
-def index(request):
+def home(request):
     return HttpResponse("<h1>Hello HOME</h1>")
