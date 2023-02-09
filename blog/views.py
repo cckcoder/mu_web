@@ -1,10 +1,16 @@
 from django.shortcuts import render, redirect
+from django.db.models import Q
 from .models import Post
 from .forms import ContactForm
 
 def home(request):
     # Query all post
-    all_post = Post.objects.all()
+    search_post = request.GET.get('search')
+    if search_post:
+        all_post = Post.objects.filter(Q(title__icontains=search_post))
+    else:
+        all_post = Post.objects.all()
+
     return render(request, 'blog/home.html', {'all_posts': all_post})
 
 def about(request):
