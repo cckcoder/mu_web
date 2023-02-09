@@ -12,6 +12,12 @@ windows os
 
 ### Activate env
 
+mac os
+> source /env/bin/activate
+
+windows os
+> \env\Script\activate
+
 ## Ref Tools
 * [vs code](https://code.visualstudio.com/)
 * [DB Browser](https://sqlitebrowser.org/)
