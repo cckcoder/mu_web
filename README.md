@@ -19,6 +19,7 @@ windows os
 > \env\Script\activate
 
 ## Python Shell
+* `python manage.py shell`
 
 ## Ref Tools
 * [vs code](https://code.visualstudio.com/)
