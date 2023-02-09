@@ -56,7 +56,7 @@ Installation
 
 Require to install pillow library
 
-`pip install Pillow`
+`pip install pillow`
 
 ## Ref Tools
 * [vs code](https://code.visualstudio.com/)
