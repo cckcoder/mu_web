@@ -47,11 +47,11 @@
             <p>I love to learn Django Framework</p>
             <div class="row">
             {% for post in all_posts %}
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">{{ post.title }}</h5>
-                            <p class="card-text">{{ post.body }}</p>
+                            <p class="card-text text-secondary">{{ post.short_description }}</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
