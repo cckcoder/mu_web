@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from .models import Post
 
 def home(request):
@@ -14,4 +14,7 @@ def post_details(request, post_id):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def contact(request):
+    if request.method == "POST":
+        print("Submit Form")
+
     return render(request, 'blog/forms.html')
