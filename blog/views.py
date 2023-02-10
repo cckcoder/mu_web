@@ -18,7 +18,7 @@ def home(request):
 def about(request):
     return render(request, 'blog/about.html')
 
-@login_required(login_url="/")
+@login_required(login_url="/sign-in")
 def post_details(request, post_id):
     post = Post.objects.get(id=post_id)
     return render(request, 'blog/post_detail.html', {'post': post})
@@ -45,3 +45,6 @@ def sign_up(request):
         form = RegisterForm()
 
     return render(request, 'blog/sign_up.html', {'form': form})
+
+def sign_in(request):
+    return render(request, 'blog/sign_in.html')
