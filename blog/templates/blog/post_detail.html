@@ -15,7 +15,7 @@
                 อัพเดทล่าสุด: {{ post.date_created|date }}
             </p>
             <p>
-                {{ post.body }}
+                {{ post.body|safe }}
             </p>
             <a href="{% url 'home' %}" class="btn btn-success mt-2">
                 Back to home

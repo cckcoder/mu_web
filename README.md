@@ -46,6 +46,12 @@ windows os
 ## Python Shell
 * `python manage.py shell`
 
+## Summernote WYSIWYG
+* [Summernote](https://github.com/summernote/django-summernote)
+
+Installation
+`pip install django-summernote`
+
 ## Ref Tools
 * [vs code](https://code.visualstudio.com/)
 * [DB Browser](https://sqlitebrowser.org/)
