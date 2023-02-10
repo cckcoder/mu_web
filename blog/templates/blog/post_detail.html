@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+            <h1>{{ post.title }}</h1>
+            <p>
+                {{ post.date_created }}
+            </p>
+            <img src="{{ post.feature_image.url }}" class="img-fluid">
+            <p>
+                {{ post.body|safe }}
+            </p>
+            <a href="{% url 'home' %}" class="btn btn-info">Back to home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
