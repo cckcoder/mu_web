@@ -59,3 +59,7 @@ def sign_in(request):
             return redirect('/')
 
     return render(request, 'blog/sign_in.html')
+
+def sign_out(request):
+    logout(request)
+    return redirect('/sign-in')
