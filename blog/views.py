@@ -3,6 +3,8 @@ from django.db.models import Q
 from .models import Post
 from .forms import ContactForm, RegisterForm
 
+from django.contrib.auth.decorators import login_required
+
 def home(request):
     # Query all post
     search_post = request.GET.get('search')
@@ -16,6 +18,7 @@ def home(request):
 def about(request):
     return render(request, 'blog/about.html')
 
+@login_required(login_url="/")
 def post_details(request, post_id):
     post = Post.objects.get(id=post_id)
     return render(request, 'blog/post_detail.html', {'post': post})
