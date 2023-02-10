@@ -4,6 +4,7 @@ from .models import Post
 from .forms import ContactForm, RegisterForm
 
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 
 def home(request):
     # Query all post
@@ -47,4 +48,13 @@ def sign_up(request):
     return render(request, 'blog/sign_up.html', {'form': form})
 
 def sign_in(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('/')
+
     return render(request, 'blog/sign_in.html')
