@@ -31,7 +31,10 @@
             </a>
             <div class="dropdown-menu">
             <a class="dropdown-item" href="{% url 'sign-up' %}">Sign Up</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="{% url 'sign-in' %}">Sign In</a>
+            <a class="dropdown-item" href="{% url 'sign-out' %}">
+                Sign Out
+            </a>
         </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" action="{% url 'home' %}" method="GET">
