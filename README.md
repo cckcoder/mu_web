@@ -52,6 +52,12 @@ windows os
 Installation
 `pip install django-summernote`
 
+## Media (upload file from user)
+
+Require to install pillow library
+
+`pip install pillow`
+
 ## Ref Tools
 * [vs code](https://code.visualstudio.com/)
 * [DB Browser](https://sqlitebrowser.org/)
