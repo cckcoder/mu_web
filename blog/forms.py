@@ -33,4 +33,3 @@ class RegisterForm(UserCreationForm):
         "password1",
         "password2",
     ]
-

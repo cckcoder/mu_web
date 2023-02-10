@@ -20,7 +20,6 @@ def post_detail(request, post_id):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def contact(request):
-    form = ContactForm()
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
